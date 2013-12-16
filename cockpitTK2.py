@@ -8,17 +8,9 @@ import requests as rr
 
 def get_indicators():
 
-##    print 'getting inds'
     try:
         r=session.get("HTTP://"+ADDRESS+":8111/indicators", timeout=timeout)
-    ##    print r.text
-    ##    r = conn.getresponse()
-    ##    print 
-    ##    r = urllib2.urlopen('http://'+ADDRESS+':8111/indicators')
-        
         d = json.loads(r.text)
-        
-
     except:
         d = {}
 ##    d = json.loads('''{"valid": true,
