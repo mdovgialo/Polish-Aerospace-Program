@@ -1,0 +1,8 @@
+﻿{"s": 20, "font":"TIMES","timeout": 0.01, "dt": 0.05, "vario_size": 40, "vario_gridx": 1, "vario_gridy": 0, "water_temperature_size": 30, "water_temperature_gridx": 0, "water_temperature_gridy": 5, "water_temperature1_size": 30, "water_temperature1_gridx": 2, "water_temperature1_gridy": 5, "ammo_counter1_size": 20, "ammo_counter1_gridx": 1, "ammo_counter1_gridy": 1,
+"ammo_counter2_size": 20, "ammo_counter2_gridx": 1, "ammo_counter2_gridy": 2,
+"ammo_counter3_size": 20, "ammo_counter3_gridx": 1, "ammo_counter3_gridy": 3,
+"ammo_counter4_size": 20, "ammo_counter4_gridx": 1, "ammo_counter4_gridy": 4,
+"oil_temperature1_size": 30, "oil_temperature1_gridx": 1, "oil_temperature1_gridy": 6,
+"oil_temperature_size": 30, "oil_temperature_gridx": 1, "oil_temperature_gridy": 5
+
+}

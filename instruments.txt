@@ -1,0 +1,5 @@
+vario
+oil_temperature
+water_temperature
+ammo
+rpm
