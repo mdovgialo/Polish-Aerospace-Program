@@ -248,11 +248,15 @@ class App:                         ### (1)
     def upd(self):
         d = get_indicators()
         try:
-            if 'vario' not in d:
-                d['vario'] = (d['altitude_hour']-self.ind['altitude_hour'])/(time.time()/self.t_m)
+            if 'vario' not in d and len(d)>1:
+                d['vario'] = (d['altitude_hour']-self.ind['altitude_hour'])/(time.time()-self.t_m)
                 self.t_m=time.time()
         except Exception:
-            pass
+            try:
+                if len(d)>1:
+                    d['vario'] = 0
+            except:
+                pass
         self.ind = d
         if len(d) == 0:
             for child in self.frame.winfo_children():
@@ -269,6 +273,7 @@ class App:                         ### (1)
             for child in self.frame.winfo_children():
                 child.destroy()
             self.inds={}
+            self.ind ={}
 
         elif d['valid']==True and len(self.inds)<1:
             ds = self.inds_to_disp(self.frame)
