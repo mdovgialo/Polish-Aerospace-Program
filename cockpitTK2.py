@@ -10,9 +10,14 @@ def get_indicators():
 
     try:
         r=session.get("HTTP://"+ADDRESS+":8111/indicators", timeout=timeout)
-        d = json.loads(r.text)
+        d = json.loads(r.text)        
     except:
         d = {}
+    try:
+        r=session.get("HTTP://"+ADDRESS+":8111/state", timeout=timeout)
+        d.update( json.loads(r.text) )
+    except:
+        pass
 ##    d = json.loads('''{"valid": true,
 ##"speed": 0.000512,
 ##"pedals1": -1.000000,
@@ -94,10 +99,18 @@ class GenericInd():
             self.prefix = settings[self.name+'_prefix']
         else:
             self.prefix = self.name
-        
+            
+        if (self.name+'_limit' in settings):
+            self.limit = settings[self.name+'_limit']
+        else:
+            self.limit = 100000000000
         self.update(0)
         
-    def update(self, temp):                 
+    def update(self, temp):
+        if temp > self.limit:
+            self.widget.config(fg='red')
+        else:
+            self.widget.config(fg='white') 
         self.label.set(self.prefix+' '+str(temp))
 
 class VarioInd():
@@ -139,13 +152,18 @@ class WaterTempInd():
             self.prefix = settings[self.name+'_prefix']
         else:
             self.prefix = u"H₂O "
+            
+        if (self.name+'_limit' in settings):
+            self.limit = settings[self.name+'_limit']
+        else:
+            self.limit = 100000000000
         self.update(0)
         
     def update(self, temp):
-        if temp > 95:
+        if temp > self.limit:
             self.widget.config(fg='red')
         else:
-            self.widget.config(fg='white')                   
+            self.widget.config(fg='white')               
         self.label.set(self.prefix+self.name[17:]+' '+str(int(temp))+u' °C')
 
 class HeadTempInd():
@@ -164,9 +182,17 @@ class HeadTempInd():
             self.prefix = settings[self.name+'_prefix']
         else:
             self.prefix = u"Head "
+        if (self.name+'_limit' in settings):
+            self.limit = settings[self.name+'_limit']
+        else:
+            self.limit = 100000000000
         self.update(0)
         
-    def update(self, temp):            
+    def update(self, temp):
+        if temp > self.limit:
+            self.widget.config(fg='red')
+        else:
+            self.widget.config(fg='white') 
         self.label.set(self.prefix+self.name[17:]+' '+str(int(temp))+u' °C')
 
 class AmmoInd():
@@ -185,10 +211,14 @@ class AmmoInd():
             self.prefix = settings[self.name+'_prefix']
         else:
             self.prefix = "Ammo "
+        if (self.name+'_limit' in settings):
+            self.limit = settings[self.name+'_limit']
+        else:
+            self.limit = 100000000000
         self.update(1)
         
     def update(self, temp):
-        if temp < 50:
+        if temp < self.limit:
             self.widget.config(fg='red')
         else:
             self.widget.config(fg='white') 
@@ -210,10 +240,14 @@ class OilTempInd():
             self.prefix = settings[self.name+'_prefix']
         else:
             self.prefix = "Oil "
+        if (self.name+'_limit' in settings):
+            self.limit = settings[self.name+'_limit']
+        else:
+            self.limit = 100000000000
         self.update(0)
         
     def update(self, temp):
-        if temp > 110:
+        if temp > self.limit:
             self.widget.config(fg='red')
         else:
             self.widget.config(fg='white')   
