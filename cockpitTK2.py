@@ -123,8 +123,7 @@ OTHER_COLUMN = 3
 NEEDED_INSTRUMENTS = ['vario', 'temperature', 'altitude_hour', 'ammo', 'flaps']
 ADDRESS = "localhost"
 timeout=0.001
-session = rr.session()#ADDRESS+':8111')
-##conn.connect()
+session = rr.session()
 dt = 1
 IPSET=True
 TS = 25
