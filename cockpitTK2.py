@@ -7,7 +7,8 @@ import time
 import requests as rr
 import math as m
 import random
-
+import ctypes
+SPI_SETSCREENSAVEACTIVE = 17
 def get_indicators():
 
     try:
@@ -548,6 +549,25 @@ class App:                         ### (1)
         
         else:
             return GenericInd(master, instr)
+SPI_SETSCREENSAVEACTIVE = 17
+SPI_GETSCREENSAVEACTIVE = 16
+def setScreenSaverEnabled(state):
+    """Enable or disable the Windows screensaver.
+    Note that enabling the screen save isn't the same as running it. It just
+    means that the saver *will* run after the screen saver wait time has elapsed
+    the PC is unused during that time."""
+    ctypes.windll.user32.SystemParametersInfoA(SPI_SETSCREENSAVEACTIVE,
+                                               state,
+                                               None,
+                                               0)
+    
+def getScreenSaverEnabled():
+    state = ctypes.c_int()
+    ctypes.windll.user32.SystemParametersInfoA(SPI_GETSCREENSAVEACTIVE,
+                                               0,
+                                               ctypes.byref(state),
+                                               0)
+    return bool(state.value)
 
 if __name__ == '__main__':
     try:
@@ -603,4 +623,16 @@ if __name__ == '__main__':
         pass
     root.config(bg=BG)
     cockpit = App(root)
+
+    try :
+        scr_act = getScreenSaverEnabled()
+        if scr_act:
+             setScreenSaverEnabled(False)
+    except:
+        pass
     root.mainloop()
+    try :
+        if scr_act:
+             setScreenSaverEnabled(True)
+    except:
+        pass
