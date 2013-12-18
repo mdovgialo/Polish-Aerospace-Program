@@ -596,6 +596,11 @@ if __name__ == '__main__':
     
 
     root = Tk.Tk()
+    try:
+        if  settings['ON_TOP'] == 1:
+            root.wm_attributes("-topmost", 1)
+    except:
+        pass
     root.config(bg=BG)
     cockpit = App(root)
     root.mainloop()

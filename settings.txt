@@ -37,6 +37,7 @@
 "flaps, %_gridx" : 0, "flaps, %_gridy" : 1000, "flaps, %_size" : 100,
 "gear, %_gridx" : 1, "gear, %_gridy" : 1000, "gear, %_size" : 100,
 "airbrake, %_gridx" : 2, "airbrake, %_gridy" : 1000, "airbrake, %_size" : 100,
-"DRAW_ALL": 0
+"DRAW_ALL": 0,
+"ON_TOP":1
 
 }
