@@ -1,8 +1,42 @@
-﻿{"s": 20, "font":"TIMES","timeout": 0.01, "dt": 0.05, "vario_size": 40, "vario_gridx": 1, "vario_gridy": 0, "water_temperature_size": 30, "water_temperature_gridx": 0, "water_temperature_gridy": 5, "water_temperature1_size": 30, "water_temperature1_gridx": 2, "water_temperature1_gridy": 5, "ammo_counter1_size": 20, "ammo_counter1_gridx": 1, "ammo_counter1_gridy": 1,
+﻿{"s": 20, "font":"TIMES","timeout": 0.03, "dt": 0.010, 
+"altitude_hour_gridx": 0, "altitude_hour_gridy": 0, "altitude_hour_prefix": "Alt",
+"vario_size": 40, "vario_gridx": 1, "vario_gridy": 0, 
+"ammo_counter1_size": 20, "ammo_counter1_gridx": 1, "ammo_counter1_gridy": 1,
 "ammo_counter2_size": 20, "ammo_counter2_gridx": 1, "ammo_counter2_gridy": 2,
 "ammo_counter3_size": 20, "ammo_counter3_gridx": 1, "ammo_counter3_gridy": 3,
 "ammo_counter4_size": 20, "ammo_counter4_gridx": 1, "ammo_counter4_gridy": 4,
-"oil_temperature1_size": 30, "oil_temperature1_gridx": 1, "oil_temperature1_gridy": 6,
-"oil_temperature_size": 30, "oil_temperature_gridx": 1, "oil_temperature_gridy": 5
+"ammo_counter5_size": 20, "ammo_counter5_gridx": 2, "ammo_counter5_gridy": 1,
+"ammo_counter6_size": 20, "ammo_counter6_gridx": 2, "ammo_counter6_gridy": 2,
+"ammo_counter7_size": 20, "ammo_counter7_gridx": 2, "ammo_counter7_gridy": 3,
+"ammo_counter8_size": 20, "ammo_counter8_gridx": 2, "ammo_counter8_gridy": 4,
+"oil_temperature_size": 30, "oil_temperature_gridx": 0, "oil_temperature_gridy": 10,
+"oil_temperature1_size": 30, "oil_temperature1_gridx": 1, "oil_temperature1_gridy": 10,
+"oil_temperature2_size": 30, "oil_temperature2_gridx": 2, "oil_temperature2_gridy": 10,
+"oil_temperature3_size": 30, "oil_temperature3_gridx": 3, "oil_temperature3_gridy": 10,
+
+"water_temperature_size": 30, "water_temperature_gridx": 0, "water_temperature_gridy": 9,
+"water_temperature1_size": 30, "water_temperature1_gridx": 1, "water_temperature1_gridy": 9,
+"water_temperature2_size": 30, "water_temperature2_gridx": 2, "water_temperature2_gridy": 9,
+"water_temperature3_size": 30, "water_temperature3_gridx": 3, "water_temperature3_gridy": 9,
+
+"head_temperature_size": 30, "head_temperature_gridx": 0, "head_temperature_gridy": 11,
+"head_temperature1_size": 30, "head_temperature1_gridx": 1, "head_temperature1_gridy": 11,
+"head_temperature2_size": 30, "head_temperature2_gridx": 2, "head_temperature2_gridy": 11,
+"head_temperature3_size": 30, "head_temperature3_gridx": 3, "head_temperature3_gridy": 11,
+
+"oil temp 1, C_size": 30, "oil temp 1, C_gridx": 0, "oil temp 1, C_gridy": 10,
+"oil temp 2, C_size": 30, "oil temp 2, C_gridx": 1, "oil temp 2, C_gridy": 10,
+"oil temp 3, C_size": 30, "oil temp 3, C_gridx": 2, "oil temp 3, C_gridy": 10,
+"oil temp 4, C_size": 30, "oil temp 4, C_gridx": 3, "oil temp 4, C_gridy": 10,
+
+"water temp 1, C_size": 30, "water temp 1, C_gridx": 0, "water temp 1, C_gridy": 9,
+"water temp 2, C_size": 30, "water temp 2, C_gridx": 1, "water temp 2, C_gridy": 9,
+"water temp 3, C_size": 30, "water temp 3, C_gridx": 2, "water temp 3, C_gridy": 9,
+"water temp 4, C_size": 30, "water temp 4, C_gridx": 3, "water temp 4, C_gridy": 9,
+
+"flaps, %_gridx" : 0, "flaps, %_gridy" : 1000, "flaps, %_size" : 100,
+"gear, %_gridx" : 1, "gear, %_gridy" : 1000, "gear, %_size" : 100,
+"airbrake, %_gridx" : 2, "airbrake, %_gridy" : 1000, "airbrake, %_size" : 100,
+"DRAW_ALL": 0
 
 }
