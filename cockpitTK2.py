@@ -541,9 +541,9 @@ class App:                         ### (1)
             return HeadTempInd(master, instr)
         elif "flaps, %" == instr:
             return FlapsInd(master, instr)
-        elif "gear" in instr:
+        elif "gear, %" in instr:
             return GearInd(master, instr)
-        elif "airbrake" in instr:
+        elif "airbrake, %" in instr:
 ##            print 'airbrake in instr'
             return AirbrakeInd(master, instr)
         
