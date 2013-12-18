@@ -628,11 +628,13 @@ if __name__ == '__main__':
         scr_act = getScreenSaverEnabled()
         if scr_act:
              setScreenSaverEnabled(False)
+             print 'screensaver turned off
     except:
         pass
     root.mainloop()
     try :
         if scr_act:
              setScreenSaverEnabled(True)
+             print 'screensaver turned on'
     except:
         pass
