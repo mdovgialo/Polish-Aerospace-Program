@@ -11,14 +11,6 @@ oil temp 1, C
 oil temp 2, C
 oil temp 3, C
 oil temp 4, C
-oil_temperature
-oil_temperature1
-oil_temperature2
-oil_temperature3
-water_temperature
-water_temperature1
-water_temperature2
-water_temperature3
 head_temperature
 head_temperature1
 head_temperature2

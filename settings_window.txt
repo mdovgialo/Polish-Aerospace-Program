@@ -1,6 +1,6 @@
 ﻿{"s": 20, "font":"TIMES","timeout": 0.09, "dt": 0.010, 
 "altitude_hour_gridx": 0, "altitude_hour_gridy": 0, "altitude_hour_prefix": "Alt",
-"Vy, m/s_size": 40, "Vy, m/s_gridx": 1, "Vy, m/s_gridy": 0, 
+"Vy, m/s_size": 40, "Vy, m/s_gridx": 1, "Vy, m/s_gridy": 0, "Vy, m/s_prefix":"Climb",
 "ammo_counter1_size": 20, "ammo_counter1_gridx": 1, "ammo_counter1_gridy": 1,
 "ammo_counter2_size": 20, "ammo_counter2_gridx": 1, "ammo_counter2_gridy": 2,
 "ammo_counter3_size": 20, "ammo_counter3_gridx": 1, "ammo_counter3_gridy": 3,
