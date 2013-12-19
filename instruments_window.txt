@@ -1,0 +1,33 @@
+gear, %
+airbrake, %
+flaps, %
+altitude_hour
+vario
+water temp 1, C
+water temp 2, C
+water temp 3, C
+water temp 4, C
+oil temp 1, C
+oil temp 2, C
+oil temp 3, C
+oil temp 4, C
+oil_temperature
+oil_temperature1
+oil_temperature2
+oil_temperature3
+water_temperature
+water_temperature1
+water_temperature2
+water_temperature3
+head_temperature
+head_temperature1
+head_temperature2
+head_temperature3
+ammo_counter1
+ammo_counter2
+ammo_counter3
+ammo_counter4
+ammo_counter5
+ammo_counter6
+ammo_counter7
+ammo_counter8

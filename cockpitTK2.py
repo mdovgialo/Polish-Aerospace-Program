@@ -8,7 +8,6 @@ import requests as rr
 import math as m
 import random
 import ctypes
-SPI_SETSCREENSAVEACTIVE = 17
 def get_indicators():
 
     try:
@@ -461,7 +460,12 @@ class App:                         ### (1)
         
         self.status = Tk.StringVar()
         self.status.set('Avaiting indicators from game session')
-        self.statuswidg = Tk.Label(myParent, textvariable=self.status, fg=FG, bg=BG, font=labelfonts).pack()
+        self.statuswidg = Tk.Label(myParent, textvariable=self.status, fg=FG, bg=BG, font=labelfonts)
+        try:
+            if settings['STATUSBAR']==1:
+                self.statuswidg.pack()
+        except:
+            pass
         
         self.frame = Frame(myParent)
         self.frame.pack()
@@ -616,6 +620,9 @@ if __name__ == '__main__':
     
 
     root = Tk.Tk()
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    
     try:
         if  settings['ON_TOP'] == 1:
             root.wm_attributes("-topmost", 1)
@@ -628,10 +635,23 @@ if __name__ == '__main__':
         scr_act = getScreenSaverEnabled()
         if scr_act:
              setScreenSaverEnabled(False)
-             print 'screensaver turned off
+             print 'screensaver turned off'
+    except:
+        pass
+    try:
+        if settings['AS_OVERLAY'] == 1:
+            
+            root.attributes('-transparentcolor', BG)
+            root.overrideredirect(1)
+    except:
+        pass
+    try:
+        if settings['SET_GEOMETRY'] == 1:
+            root.geometry('{}x{}+{}+{}'.format(settings['x'],settings['y'], settings['dx'], settings['dy']))
     except:
         pass
     root.mainloop()
+    
     try :
         if scr_act:
              setScreenSaverEnabled(True)
