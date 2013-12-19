@@ -150,8 +150,10 @@ class FlapsInd():
         self.flap = self.widget.create_line(self.size*0.5, self.size*0.5, self.size*0.7, self.size*0.7, fill=FG, width=self.linewith)
 
     def update(self, proc):
-        self.widget.delete(self.flap)
-        
+        try:
+            self.widget.delete(self.flap)
+        except:
+            pass
         if proc == '--':
              self.flap = self.widget.create_line(self.size*0.0, self.size*1, self.size*1, 0,
                                             fill=ALLERT_CL, capstyle = Tk.ROUND, width=self.linewith)
@@ -494,7 +496,9 @@ class App:                         ### (1)
                     
     def upd(self):
         d = get_indicators()
+##        print len(d), 'en d'
         try:
+##            print d['valid'], 'valid'
             if 'vario' not in d and len(d)>1:
                 d['vario'] = (d['altitude_hour']-self.ind['altitude_hour'])/(time.time()-self.t_m)
                 self.t_m=time.time()
@@ -508,6 +512,8 @@ class App:                         ### (1)
         if len(d) == 0:
             for child in self.frame.winfo_children():
                 child.destroy()
+            self.inds={}
+            self.ind ={}
             self.status.set('No response from game at: '+"HTTP://"+ADDRESS+":8111/indicators")
         elif d['valid'] and len(self.inds)>0:
             self.status.set('In game at: '+"HTTP://"+ADDRESS+":8111/indicators")
