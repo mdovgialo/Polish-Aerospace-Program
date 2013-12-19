@@ -4,7 +4,7 @@ flaps, %
 water temp 1, C
 oil temp 1, C
 head_temperature
-vario
+Vy, m/s
 ammo_counter1
 ammo_counter2
 ammo_counter3

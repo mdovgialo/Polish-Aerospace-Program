@@ -2,7 +2,7 @@ gear, %
 airbrake, %
 flaps, %
 altitude_hour
-vario
+Vy, m/s
 water temp 1, C
 water temp 2, C
 water temp 3, C

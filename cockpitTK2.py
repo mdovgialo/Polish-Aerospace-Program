@@ -191,7 +191,7 @@ class AirbrakeInd():
         self.widget.delete(self.flap2)
 
         if proc == '--':
-             self.flap = self.widget.create_line(self.size*0.0, self.size*1, self.size*1, 0,
+             self.flap1 = self.widget.create_line(self.size*0.0, self.size*1, self.size*1, 0,
                                             fill=ALLERT_CL, capstyle = Tk.ROUND, width=self.linewith)
         else:
             phi = proc/100.*m.pi/2
@@ -231,6 +231,7 @@ class GearInd():
         self.planeu = self.widget.create_line(self.size*0.5, self.size*0.2, self.size*0.5, self.size*0.01, fill=FG, smooth=False, width=self.linewith/2)
         self.gearup = False
     def show_gear(self):
+        self.widget.delete('GEAR')
         if self.gearup==True:
             tag = 'GEAR'
             self.gear1 =  self.widget.create_line(self.size*0.3, self.size*0.38, self.size*0.3, self.size*0.5,
@@ -245,7 +246,7 @@ class GearInd():
                                                  outline = ALLERT_CL, fill= ALLERT_CL, width=self.linewith/2 , tags=tag)
             self.gearup = False
         else:
-            self.widget.delete('GEAR')
+            
             self.gearup = True
     def update(self, proc):
         if proc == '--':

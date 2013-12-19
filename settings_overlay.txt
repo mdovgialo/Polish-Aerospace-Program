@@ -1,6 +1,7 @@
-﻿{"s": 15, "font":"TIMES","timeout": 0.3, "dt": 0.010, 
+﻿{"s": 15, "font":"TIMES","timeout": 0.1, "dt": 0.010, 
 "altitude_hour_gridx": 0, "altitude_hour_gridy": 0, "altitude_hour_prefix": "Alt",
 "vario_size": 15, "vario_gridx": 5, "vario_gridy": 0, "vario_prefix":"Climb",
+"Vy, m/s_size": 15, "Vy, m/s_gridx": 5, "Vy, m/s_gridy": 0, "Vy, m/s_prefix":"Climb",
 "ammo_counter1_size": 15, "ammo_counter1_gridx": 6, "ammo_counter1_gridy": 0, "ammo_counter1_prefix": "Am: ","ammo_counter1_limit": 70,
 "ammo_counter2_size": 15, "ammo_counter2_gridx": 7, "ammo_counter2_gridy": 0, "ammo_counter2_prefix": "Am: ","ammo_counter2_limit": 70,
 "ammo_counter3_size": 15, "ammo_counter3_gridx": 8, "ammo_counter3_gridy": 0, "ammo_counter3_prefix": "Am: ","ammo_counter3_limit": 70,
