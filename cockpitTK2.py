@@ -276,6 +276,10 @@ class GenericInd():
             self.prefix = settings[self.name+'_prefix']
         else:
             self.prefix = self.name
+        if (self.name+'_suffix' in settings):
+            self.suffix = settings[self.name+'_suffix']
+        else:
+            self.suffix = ''
             
         if (self.name+'_limit' in settings):
             self.limit = settings[self.name+'_limit']
@@ -288,7 +292,35 @@ class GenericInd():
             self.widget.config(fg=ALLERT_CL)
         else:
             self.widget.config(fg=FG) 
-        self.label.set(self.prefix+' {}'.format(temp))
+        self.label.set(self.prefix+' {}{}'.format(temp, self.suffix))
+
+
+class GenericLabel():
+    def __init__(self, master, name):
+        self.label = Tk.StringVar()
+        self.name = str(name)
+        if self.name+'_size' in settings:
+            self.widget = Tk.Label(master, textvariable=self.label,fg=FG, bg=BG, font=(FONT, int(settings[self.name+'_size'])))
+        else:
+            self.widget = Tk.Label(master, textvariable=self.label,fg=FG, bg=BG, font=labelfont)
+        if (self.name+'_gridx' in settings) and (self.name+'_gridy' in settings):
+            self.widget.grid(column= int(settings[self.name+'_gridx']),row= int(settings[self.name+'_gridy']))
+        else:
+            self.widget.grid(column=OTHER_COLUMN,)
+        if (self.name+'_prefix' in settings):
+            self.prefix = settings[self.name+'_prefix']
+        else:
+            self.prefix = self.name
+            
+        if (self.name+'_limit' in settings):
+            self.limit = settings[self.name+'_limit']
+        else:
+            self.limit = 100000000000
+        self.label.set(self.prefix)
+        self.update(0)
+        
+    def update(self, temp):
+        self.label.set(self.prefix)
 
 class VarioInd():
     def __init__(self, master, name):
@@ -492,7 +524,12 @@ class App:                         ### (1)
                 for available in self.ind.keys():
                     if instr in available:
                         ind_d[available] = self.get_instr(available, master)
-##        print ind_d
+                    try:
+                        
+                        if settings[instr+'_bind'] == available:
+                            ind_d[instr] = self.get_instr(instr, master, label=True)
+                    except:
+                        pass
         return ind_d
                     
     def upd(self):
@@ -539,9 +576,13 @@ class App:                         ### (1)
             
         self.frame.after(int(dt*1000), self.upd)
 
-    def get_instr(self, instr, master):
+    def get_instr(self, instr, master, label=False):
+    
         if 'water_temperature' in instr:
             return WaterTempInd(master, instr)
+        elif label==True:
+            
+            return GenericLabel(master, instr)
         elif 'oil_temperature' in instr:
             return OilTempInd(master, instr)
         elif 'ammo' in instr:
@@ -557,6 +598,7 @@ class App:                         ### (1)
         elif "airbrake, %" in instr:
 ##            print 'airbrake in instr'
             return AirbrakeInd(master, instr)
+        
         
         else:
             return GenericInd(master, instr)
