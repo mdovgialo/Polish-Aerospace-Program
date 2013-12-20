@@ -39,8 +39,8 @@
 "AS_OVERLAY":1,
 "SET_GEOMETRY":1,
 "x" : 1366,
-"y" : 150,
+"y" : 80,
 "dx" : 0,
-"dy" : 0,
+"dy": 688,
 "STATUSBAR":0
 }
