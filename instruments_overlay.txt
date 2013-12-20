@@ -2,8 +2,18 @@ gear, %
 airbrake, %
 flaps, %
 water temp 1, C
+water temp 2, C
+water temp 3, C
+water temp 4, C
 oil temp 1, C
+oil temp 2, C
+oil temp 3, C
+oil temp 4, C
 head_temperature
+power 1, hp
+power 2, hp
+power 3, hp
+power 4, hp
 Vy, m/s
 ammo_counter1
 ammo_counter2

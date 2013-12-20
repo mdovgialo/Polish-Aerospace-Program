@@ -1,11 +1,6 @@
 gear, %
 airbrake, %
 flaps, %
-Vy, m/s
-Engine 1
-Engine 2
-Engine 3
-Engine 4
 water temp 1, C
 water temp 2, C
 water temp 3, C
@@ -14,18 +9,12 @@ oil temp 1, C
 oil temp 2, C
 oil temp 3, C
 oil temp 4, C
-radiator 1, %
-radiator 2, %
-radiator 3, %
-radiator 4, %
+head_temperature
 power 1, hp
 power 2, hp
 power 3, hp
 power 4, hp
-head_temperature
-head_temperature1
-head_temperature2
-head_temperature3
+Vy, m/s
 ammo_counter1
 ammo_counter2
 ammo_counter3
