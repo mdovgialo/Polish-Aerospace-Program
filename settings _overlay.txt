@@ -1,4 +1,4 @@
-﻿{"s": 8, "font":"Tahoma","timeout": 0.1, "dt": 0.010, 
+﻿{"s": 8, "font":"Arial","timeout": 0.1, "dt": 0.010, 
 
  "Vy, m/s_gridx": 3, "Vy, m/s_gridy": 0, "Vy, m/s_prefix":"Climb",
  "ammo_counter1_gridx": 66, "ammo_counter1_gridy": 0, "ammo_counter1_prefix": "Am: ","ammo_counter1_limit": 70,
@@ -31,16 +31,16 @@
  "water temp 3, C_gridx": 6, "water temp 3, C_gridy": 2,"water temp 3, C_limit":100, "water temp 3, C_prefix":"H2O:",
  "water temp 4, C_gridx": 6, "water temp 4, C_gridy": 3,"water temp 4, C_limit":100, "water temp 4, C_prefix":"H2O:",
 
-"flaps, %_gridx" : 0, "flaps, %_gridy" : 0, "flaps, %_size" : 25,
-"gear, %_gridx" : 1, "gear, %_gridy" : 0, "gear, %_size" : 25,
-"airbrake, %_gridx" : 2, "airbrake, %_gridy" : 0, "airbrake, %_size" : 25,
+"flaps, %_gridx" : 0, "flaps, %_gridy" : 0, "flaps, %_size" : 30,
+"gear, %_gridx" : 1, "gear, %_gridy" : 0, "gear, %_size" : 30,
+"airbrake, %_gridx" : 2, "airbrake, %_gridy" : 0, "airbrake, %_size" : 30,
 "DRAW_ALL": 0,
 "ON_TOP":1,
 "AS_OVERLAY":1,
 "SET_GEOMETRY":1,
 "x" : 1366,
-"y" : 80,
+"y" : 85,
 "dx" : 0,
-"dy": 688,
+"dy": 683,
 "STATUSBAR":0
 }

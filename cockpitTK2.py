@@ -112,6 +112,7 @@ def get_indicators():
 
 l = 0
 BG = 'black'
+BGG= 'black'
 ALLERT_CL = 'red'
 FG = 'white'
 white = (255,255,255,255)
@@ -145,7 +146,7 @@ class FlapsInd():
         wing = [self.size*0.1, self.size*0.5, self.size*0.3, self.size*0.3,
                 self.size*0.9, self.size*0.5, self.size*0.85, self.size*0.5,
                 self.size*0.5, self.size*0.5, self.size*0.1, self.size*0.5,]
-        self.linewith=self.size/25
+        self.linewith=self.size/15
         self.wing = self.widget.create_line(*wing, fill=FG, smooth=True, width=self.linewith)
         self.flap = self.widget.create_line(self.size*0.5, self.size*0.5, self.size*0.7, self.size*0.7, fill=FG, width=self.linewith)
 
@@ -181,7 +182,7 @@ class AirbrakeInd():
         wing = [self.size*0.1, self.size*0.5, self.size*0.3, self.size*0.3,
                 self.size*0.9, self.size*0.5, self.size*0.85, self.size*0.5,
                 self.size*0.5, self.size*0.5, self.size*0.1, self.size*0.5,]
-        self.linewith=self.size/25
+        self.linewith=self.size/15
         self.wing = self.widget.create_line(*wing, fill=FG, smooth=True, width=self.linewith)
         self.flap1 = self.widget.create_line(self.size*0.5, self.size*0.5, self.size*0.7, self.size*0.7, fill=FG, width=self.linewith)
         self.flap2 = self.widget.create_line(self.size*0.5, self.size*0.5, self.size*0.7, self.size*0.3, fill=FG, width=self.linewith)
@@ -224,7 +225,7 @@ class GearInd():
                 self.size*0.9, self.size*0.38, ]
         
         plane = [self.size*0.45, self.size*0.2, self.size*0.55, self.size*0.39]
-        self.linewith=self.size/25
+        self.linewith=self.size/15
         
         self.wing = self.widget.create_line(*wing, fill=FG, smooth=True, width=self.linewith, capstyle = Tk.ROUND )
         self.plane = self.widget.create_oval(*plane, outline = FG, fill= FG, width=self.linewith )
@@ -506,7 +507,7 @@ class App:                         ### (1)
         self.frame.pack()
         self.statusbar = Frame(myParent)
         self.statusbar.pack()
-        self.frame.config(bg=BG)
+        self.frame.config(bg=BGG)
         self.ind = get_indicators()
        
 
@@ -677,7 +678,7 @@ if __name__ == '__main__':
             root.wm_attributes("-topmost", 1)
     except:
         pass
-    root.config(bg=BG)
+    root.config(bg=BGG)
     cockpit = App(root)
 
     try :
@@ -690,8 +691,10 @@ if __name__ == '__main__':
     try:
         if settings['AS_OVERLAY'] == 1:
             
-            root.attributes('-transparentcolor', BG)
+            root.attributes('-transparentcolor', BGG)
+            root.config(bg=BGG)
             root.overrideredirect(1)
+            
     except:
         pass
     try:
