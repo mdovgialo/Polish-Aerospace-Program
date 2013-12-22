@@ -1,4 +1,4 @@
-﻿{"s": 8, "font":"Arial","timeout": 0.1, "dt": 0.010, 
+﻿{"s": 8, "font":"Tahoma","timeout": 0.1, "dt": 0.010, 
 
  "Vy, m/s_gridx": 3, "Vy, m/s_gridy": 0, "Vy, m/s_prefix":"Climb",
  "ammo_counter1_gridx": 66, "ammo_counter1_gridy": 0, "ammo_counter1_prefix": "Am: ","ammo_counter1_limit": 70,

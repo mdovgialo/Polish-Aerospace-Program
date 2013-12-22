@@ -109,7 +109,6 @@ def get_indicators():
     return d
 
 
-
 l = 0
 BG = 'black'
 BGG= 'black'
@@ -293,7 +292,7 @@ class GenericInd():
             self.widget.config(fg=ALLERT_CL)
         else:
             self.widget.config(fg=FG) 
-        self.label.set(self.prefix+' {}{}'.format(temp, self.suffix))
+        self.label.set(self.prefix+' {:^6}{}'.format(temp, self.suffix))
 
 
 class GenericLabel():
@@ -349,7 +348,7 @@ class VarioInd():
             temp=int(temp)
         except:
             temp='--'
-        self.label.set(self.prefix+' {}'.format(temp)+' m/s')
+        self.label.set(self.prefix+' {:^6}'.format(temp)+' m/s')
 
 class WaterTempInd():
     def __init__(self, master, name):
@@ -383,7 +382,7 @@ class WaterTempInd():
             self.widget.config(fg=ALLERT_CL)
         else:
             self.widget.config(fg=FG)               
-        self.label.set(self.prefix+self.name[17:]+' '+str(temp)+u' °C')
+        self.label.set(self.prefix+self.name[17:]+' '+'{:^3}'.format(temp)+u' °C')
 
 class HeadTempInd():
     def __init__(self, master, name):
@@ -416,7 +415,7 @@ class HeadTempInd():
             self.widget.config(fg=ALLERT_CL)
         else:
             self.widget.config(fg=FG) 
-        self.label.set(self.prefix+self.name[17:]+' '+str(temp)+u' °C')
+        self.label.set(self.prefix+self.name[17:]+' '+'{:^3}'.format(temp)+u' °C')
 
 class AmmoInd():
     def __init__(self, master, name):
@@ -449,7 +448,7 @@ class AmmoInd():
             self.widget.config(fg=ALLERT_CL)
         else:
             self.widget.config(fg=FG) 
-        self.label.set(self.prefix+self.name[12:]+' '+str(temp))
+        self.label.set(self.prefix+self.name[12:]+' '+'{:^4}'.format(temp))
 
 class OilTempInd():
     def __init__(self, master, name):
@@ -482,7 +481,7 @@ class OilTempInd():
             self.widget.config(fg=ALLERT_CL)
         else:
             self.widget.config(fg=FG)   
-        self.label.set(self.prefix+self.name[15:]+' '+str(temp)+u' °C')
+        self.label.set(self.prefix+self.name[15:]+' '+'{:^3}'.format(temp)+u' °C')
 
 
 
